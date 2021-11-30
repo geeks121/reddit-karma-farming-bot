@@ -24,18 +24,17 @@ if [ ! -d "$DIR/.venv" ]; then
     echo "this is linux - install linux deps"
     pacman -Syu || { echo 'pacman -s failed failed' | tee -a $DEBUG_FILE ; exit 1; }
 
-    pacman -s \
-      g++ \
+    pacman -S \
       gcc \
-      libc6-dev \
-      make \
-      pkg-config \
-      libffi-dev \
-      python3.6 \
-      python3-pip \
-      python3-setuptools \
-      python3-dev \
-      git || { echo 'Installing dependencies failed' | tee -a $DEBUG_FILE ; exit 1; }
+      #libc6-dev \
+      #make \
+      #pkg-config \
+      #libffi-dev \
+      #python3.9 \
+      #python3-pip \
+      #python3-setuptools \
+      #python3-dev \
+      #git || { echo 'Installing dependencies failed' | tee -a $DEBUG_FILE ; exit 1; }
   elif [ "${machine}" =  "Mac" ]; then
     $(xcode-select -p) || xcode-select --install
   else
