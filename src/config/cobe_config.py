@@ -17,7 +17,7 @@ CONFIG = prefer_envar({
   "cobe_base_dir": BASE_DIR,
   "cobe_db_dir": DB_DIR,
   "cobe_main_db": MAIN_DB,
-  "cobe_min_db_size":"50mb",
+  "cobe_min_db_size":"200mb",
   "cobe_max_db_size":"300mb",
 })
 
